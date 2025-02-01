@@ -1,0 +1,8 @@
+services:
+  api:
+    volumes:
+      - ./librechat.yaml:/app/librechat.yaml
+    image: librechat
+    build:
+      context: .
+      target: node
