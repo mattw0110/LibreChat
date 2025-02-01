@@ -1,6 +1,8 @@
 version: '1.2.1'
 services:
   api:
+    environment:
+    - MONGO_URI=mongodb+srv://team:<db_password>@librechat.rrfji.mongodb.net/?retryWrites=true&w=majority&appName=LibreChat
     volumes:
       - ./librechat.yaml:/app/librechat.yaml
     image: librechat
