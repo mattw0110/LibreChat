@@ -1,8 +1,10 @@
-services:
+# For more details on the override file, see the Docker Override Guide:
+# https://docs.librechat.ai/install/configuration/docker_override.html
 
-# USE LIBRECHAT CONFIG FILE
+version: '3.4'
+
+services:
   api:
     volumes:
-    - type: bind
-      source: ./librechat.yaml
-      target: /app/librechat.yaml
+# local/filepath:container/filepath
+      - ./librechat.yaml:/app/librechat.yaml 
