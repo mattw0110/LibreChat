@@ -1,7 +1,7 @@
 cache: true
 endpoints:
   custom:
-    - name: 'OpenRouter'
+    - name: 'OpenRouter'doc
       apiKey: '${OPENROUTER_KEY}'
       baseURL: 'https://openrouter.ai/api/v1'
       models:
