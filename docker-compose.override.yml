@@ -1,6 +1,12 @@
+version: '1.2.1'
 services:
   api:
     volumes:
-      - type: bind
-        source: ./librechat.yaml
-        target: ./librechat.yaml
+      - ./librechat.yaml:/app/librechat.yaml
+    image: librechat
+    build:
+      context: .
+      target: node
+
+  mongodb:
+    image: mongo:4.4.18

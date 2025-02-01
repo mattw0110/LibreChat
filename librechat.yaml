@@ -1,16 +1,27 @@
-version: 1.1.4
+version: '1.2.1'
 cache: true
 endpoints:
   custom:
-    - name: "OpenRouter"
-      apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai/api/v1"
+    - name: 'OpenRouter'
+      apiKey: '${OPENROUTER_KEY}'
+      baseURL: 'https://openrouter.ai/api/v1'
       models:
-        default: ["deepseek/deepseek-r1:free", "deepseek/deepseek-chat", "deepseek/deepseek-chat-v2.5", "deepseek/deepseek-coder"]
+        default:
+          [
+            'deepseek/deepseek-r1:free',
+            'deepseek/deepseek-chat',
+            'deepseek/deepseek-chat-v2.5',
+            'deepseek/deepseek-coder',
+          ]
         fetch: true
       titleConvo: true
-      titleModel: "current_model"
+      titleModel: 'current_model'
       summarize: false
-      summaryModel: "current_model"
+      summaryModel: 'current_model'
       forcePrompt: false
-      modelDisplayLabel: "OpenRouter"
+      modelDisplayLabel: 'OpenRouter'
+registration:
+  socialLogins: ['google']
+  allowedDomains:
+    - 'patientize.com'
+    - 'rppldigital.com'
