@@ -1,10 +1,13 @@
-# For more details on the override file, see the Docker Override Guide:
-# https://docs.librechat.ai/install/configuration/docker_override.html
-
-# version: '3.4'
-
+version: '3.4'
+ 
 services:
   api:
     volumes:
-# local/filepath:container/filepath
       - ./librechat.yaml:/app/librechat.yaml
+    image: librechat
+    build:
+      context: .
+      target: node
+ 
+  mongodb:
+    image: mongo:4.4.18
