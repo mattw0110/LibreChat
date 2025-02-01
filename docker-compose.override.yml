@@ -1,9 +1,10 @@
-version: '3.4'
-
 services:
+
+# USE LIBRECHAT CONFIG FILE
   api:
     volumes:
-# local/filepath:container/filepath
-      - ./librechat.yaml:/app/librechat.yaml 
+    - type: bind
+      source: ./librechat.yaml
+      target: /app/librechat.yaml
   mongodb:
     image: mongo:4.4.18
