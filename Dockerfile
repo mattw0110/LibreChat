@@ -12,6 +12,9 @@ USER node
 
 COPY --chown=node:node . .
 
+# Copy librechat.yaml into the image
+COPY librechat.yaml /app/librechat.yaml
+
 RUN \
     # Allow mounting of these files, which have no default
     touch .env ; \
